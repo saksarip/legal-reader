@@ -1,0 +1,23 @@
+{
+    "manifest_version" : 2,
+    "name" : "Legal Reader",
+    "description" : "Extension to help you understand what you're agreeing to on the internet", 
+    "version" : "1.0.0",
+    "icons": {
+        "48": "LegalIcon.png"
+      },
+    "background" : {
+    "scripts" : ["jquery.min.js", "background.js"]
+    },
+    "content_scripts" : [
+    {
+    "matches" : [
+    "<all_urls>"
+    ],
+    "js" : ["jquery.min.js", "content.js"]
+    }],
+    "browser_action" : {
+    "default_popup" : "popup.html",
+    "default_title" : "A popup will come"
+    }
+    }
